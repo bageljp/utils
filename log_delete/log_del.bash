@@ -27,7 +27,7 @@ FL_LOG="${2:-*.log}"
 DEL_DAYS="${3:-31}"
 DIR_TMP="/tmp"
 LOG_TMP="${DIR_TMP}/`basename $0 .bash`_`basename ${DIR_LOG}`_${DEL_DAYS}.log"
-FL_TMP="log_del.tmp"
+FL_TMP="log_del.tmp.`date +%Y%m%d%H%M%S`"
 CMD_FIND="/bin/find"
 CMD_XARGS="/usr/bin/xargs"
 
