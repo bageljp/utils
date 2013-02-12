@@ -25,7 +25,7 @@
 DIR_LOG="${1}"
 FL_LOG="${2:-*.log}"
 DEL_DAYS="${3:-31}"
-DIR_TMP="/usr/local/tlab/tmp"
+DIR_TMP="/tmp"
 LOG_TMP="${DIR_TMP}/`basename $0 .bash`_`basename ${DIR_LOG}`_${DEL_DAYS}.log"
 FL_TMP="log_del.tmp"
 CMD_FIND="/bin/find"
