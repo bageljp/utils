@@ -30,3 +30,5 @@ $ done < hostfile
 ```
 "Test"
 ```
+
+Link https://www.google.co.jp/ Google
