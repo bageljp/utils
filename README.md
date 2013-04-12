@@ -21,11 +21,12 @@ Markdownテスト
 -
 見出しテスト6
 -
-
+```
 $ pssh -h hostlist -i hostname
 $ while read line; do
 $     ssh ${line} hostname
 $ done < hostfile
-
-$ echo "Test"
-
+```
+```
+"Test"
+```
