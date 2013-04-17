@@ -88,3 +88,19 @@ puts 'hello world!'
 | left       |       right |    center    |
 | aligned    |     aligned |   aligned    |
 
+
+
+```
+berks cookbook <cookbook-name>
+cd <cookbook-name>
+bundle
+vi Berksfile
+--
+site :opscode
+
+metadata
+cookbook 'yum'
+cookbook 'nginx'
+</code></pre>
+--
+```
