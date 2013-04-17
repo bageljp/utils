@@ -63,16 +63,16 @@ Link3 [Google](https://google.co.jp/ "Googledesuyo")
 **太字**
 
 
-```
+<pre>
 berks cookbook <cookbook-name>
 cd <cookbook-name>
 bundle
 vi Berksfile
-<pre><code>
+<code>
 site :opscode
 
 metadata
 cookbook 'yum'
 cookbook 'nginx'
-</code></pre>
-```
+</code>
+</pre>
