@@ -1,4 +1,3 @@
-
 # chef 11系
 
 
@@ -45,6 +44,7 @@ chefからは node[:platform] という形で参照する。
 複数のcookbookを管理する。
 cookbookがgemだとすると、berkshelfはbundlerみたいなもの。
 * インストール
+
 ```
 cd <chef-repo>
 vi Gemfile
@@ -56,6 +56,7 @@ bundle --path vendor/bundle
 echo "vendor" >> .gitignore
 ```
 * 使い方
+
 ```
 cd <chef-repo>
 vi Berksfile
@@ -67,6 +68,7 @@ cookbook 'nginx'
 bundle exec berks --path <cookbook-dir>
 ```
 * vagrantとの連携
+
 ```
 berks cookbook <cookbook-name>
 cd <cookbook-name>
@@ -88,6 +90,7 @@ bundle exec vagrant up
 
 ## knifeコマンド
 * ノード情報の検索
+
 ```
 knife search node <pattern>
 ```
@@ -95,12 +98,14 @@ knife search node <pattern>
 ※FQDNがnodeで始まる「knife search node "fqdn:node*"」
 ※centosでruby 1.8系「knife search node "platform:centos AND languages_ruby_version:1.8*"」
 * 複数ノードでコマンド実行
+
 ```
 knife ssh node <pattern> <command>
 ```
 ※FQDNがnodeで始まるnodeでuptime「knife ssh node "fqdn:node*" "uptime"」
 ※centosでchef-client「knife ssh node "platform:centos" "sudo chef-client"」
 * chef-clientの作成
+
 ```
 knife bootstrap <node-ip-address> [-x vagrant] --sudo -N <node-name>
 ```
@@ -110,10 +115,12 @@ knife bootstrap <node-ip-address> [-x vagrant] --sudo -N <node-name>
 
 ## chef-clientやchef-soloの実行方法
 * knifeコマンド
+
 ```
 echo <user1>@<node1> <user2>@<node2> | xargs -n 1 knife solo cook
 ```
 * knifeによるsshコマンド実行
+
 ```
 knife ssh node <pattern> "sudo chef-client"
 ```
