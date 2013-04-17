@@ -74,3 +74,7 @@ vi Berksfile
   cookbook 'yum'
   cookbook 'nginx'
 </code></pre>
+
+```ruby:hello.rb
+puts 'hello world!'
+```
