@@ -69,10 +69,10 @@ cd <cookbook-name>
 bundle
 vi Berksfile
 <code>
-site :opscode
+  site :opscode
 
-metadata
-cookbook 'yum'
-cookbook 'nginx'
+  metadata
+  cookbook 'yum'
+  cookbook 'nginx'
 </code>
 </pre>
